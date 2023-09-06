@@ -1,18 +1,18 @@
-from math import pi
-class Front:
+from datetime import date
+class Man:
+    instances_count = 0
+    def __init__(self, name):
+        self.name = name
+        Man.instances_count += 1
 
     @staticmethod
-    def rectactle(d,h):
-        a = pi * d ** 2/4
-        b = pi * d * h
-        return round(a*2 +  b,  2)
+    def counter():
+        return Man.instances_count
 
 
-    def __init__(self, di, hi):
-        self.dia = di
-        self.h = hi
-        self.area = self.rectactle(di,hi)
+a = Man("a")
+b = Man("aa")
+c = Man("fga")
 
-a = Front(1,2)
-print(a.rectactle(2,2))
-print(a.area)
+print(Man.counter())
+print("Hello git")
